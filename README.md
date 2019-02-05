@@ -32,6 +32,7 @@ Using Matplotlib
 ## Built with
 * [NumPy](http://www.numpy.org/)
 * [Pandas](https://pandas.pydata.org/)
+* [Matplotlib](https://matplotlib.org/)
 
 ## License
 This project is licensed under the [MIT license](LICENSE.md)
