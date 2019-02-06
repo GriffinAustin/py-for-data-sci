@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 def clean_data(df):
@@ -22,7 +23,7 @@ def main():
     movies = clean_data(movies)
     tags = clean_data(tags)
     ratings = clean_data(ratings)
-    
+
 
 if __name__ == '__main__':
     main()
