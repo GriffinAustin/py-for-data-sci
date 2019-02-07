@@ -1,11 +1,11 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import enum
 
 
-class GraphType(enum.Enum):
+class GraphType():
     HIST = 0
+    LINE = 1
 
 
 class ManipData(object):
@@ -17,15 +17,24 @@ class ManipData(object):
     def clean(self):
         self.df = self.df.dropna()
         
-    def graph(iself, g):
-        if g == 0:
-            self.hist = self.df.hist()
+    def graph(self, g, **kwargs):
+        if g == GraphType.HIST:
+            self.hist = self.df.hist(**kwargs)
+        if g == GraphType.LINE:
+            self.line = self.df.plot.line(**kwargs)
 
-d = pd.DataFrame({"name": ['Alfred', 'Batman', 'Catwoman'],
-    "toy": [np.nan, 'Batmobile', 'Bullwhip'],
-    "born": [pd.NaT, pd.Timestamp("1940-04-25"), pd.NaT]})
-x = ManipData(pd.DataFrame(data=d))
-x.clean()
-x.graph(GraphType.HIST)
-print(int(GraphType.HIST))
-plt.show()
+
+def main():
+    # Example of usage
+    d = pd.DataFrame({
+       'pig': [20, 18, 489, 675, 1776],
+       'horse': [4, 25, 281, 600, 1900]
+      }, index=[1990, 1997, 2003, 2009, 2014])
+    x = ManipData(pd.DataFrame(data=d))
+    x.clean()
+    x.graph(GraphType.LINE, subplots=True)
+    plt.show()
+
+
+if __name__ == '__main__':
+    main()
