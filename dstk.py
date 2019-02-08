@@ -22,6 +22,18 @@ class ManipData(object):
             self.hist = self.df.hist(**kwargs)
         if g == GraphType.LINE:
             self.line = self.df.plot.line(**kwargs)
+            
+            
+def lsrl(data):
+    x_vals = [pair[0] for pair in data]
+    y_vals = [pair[1] for pair in data]
+    
+    x_mean = np.mean(x_vals)
+    y_mean = np.mean(y_vals)
+    
+    x_stdev = np.std(x_vals)
+    y_stdev = np.std(y_vals)
+    
 
 
 def main():
