@@ -1,6 +1,6 @@
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+
 
 # Question: Is there a correlation between country region and average hf score?
 def main():
@@ -20,10 +20,18 @@ def main():
     [y_data.append(y[1]) for y in final_data]
     
     plt.bar(x_data, y_data)
-    plt.xlabel("Region")
-    plt.ylabel("Mean HF Score")
+    
+    plt.title('Mean HF Score vs. Region')
+    plt.xlabel('Region')
+    plt.ylabel('Mean HF Score')
     plt.xticks(rotation='vertical')
+    plt.ylim(0, 10)
+    
     plt.show()
+    
+    # Saves graph
+    #plt.savefig('meanhfscore_vs_region.png', bbox_inches='tight')
+
 
 if __name__ == '__main__':
     main()
