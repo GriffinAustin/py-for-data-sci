@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# Question: Is there a correlation between country region and average hf score?
+# Question: How does freedom compare from region to region?
 def main():
     print('loading data...')
     data = pd.read_csv('hfi_cc_2018.csv')
@@ -22,7 +22,7 @@ def main():
     plt.bar(x_data, y_data)
 
     plt.title('Mean HF Score vs. Region')
-    plt.xlabel('Regiosn')
+    plt.xlabel('Regions')
     plt.ylabel('Mean HF Score')
     plt.xticks(rotation='vertical')
     plt.ylim(0, 10)
