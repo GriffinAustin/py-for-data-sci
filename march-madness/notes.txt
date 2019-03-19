@@ -1,0 +1,4 @@
+x1 = team 1 data
+x2 = team 2 data
+x = x1 - x1
+y = bool such that team 1 win = 1 and team 2 win = 0
