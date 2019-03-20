@@ -19,6 +19,7 @@ def algorithmize(data):
     seed = random.randint(1, 2**32-1)
     x_train, x_validation, y_train, y_validation = train_test_split(
             x, y, test_size=validation_size, random_state=seed)
+    print(type(y_train))
 
     # logistic regression, linear discriminant analysis, k-nearest neighbor
     # classification and regression tree, Gaussian Naive Bayes, support 
