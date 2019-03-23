@@ -29,10 +29,14 @@ Using Pandas to sanitize and trim data
 ### 4. Data visualization
 Using Matplotlib
 
+### 5. Machine learning
+Using  scikit-learn
+
 ## Built with
 * [NumPy](http://www.numpy.org/)
 * [Pandas](https://pandas.pydata.org/)
 * [Matplotlib](https://matplotlib.org/)
+* [scikit-learn](https://scikit-learn.org/)
 
 ## License
 This project is licensed under the [MIT license](LICENSE.md)
