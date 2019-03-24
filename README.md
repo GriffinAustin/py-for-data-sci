@@ -25,6 +25,7 @@ Utilizing Pandas' `DataFrame`
 Using Pandas to sanitize and trim data
 
 ### 3. Data analysis
+Using Pandas and Numpy
 
 ### 4. Data visualization
 Using Matplotlib
